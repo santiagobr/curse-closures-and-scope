@@ -23,9 +23,14 @@ anotherFunction()
 
 // En este caso al llamar a la función helloWorld() la variable que está dentro de esta puede ser llamada porque no se definio con ninguna palabra clave como var, let ó const.
 
-const anotherFunction2 = () => {
-  var localVar = globalVar = 'Im global'
-}
+// Otra mala práctca: Permite acceder a una variable que está dentro de una función
 
-anotherFunction2()
-console.log(globalVar)
+// const anotherFunction2 = () => {
+//   var localVar = globalVar = 'Im global'
+// }
+
+// anotherFunction2()
+// console.log(globalVar) // --> Im global
+
+// Este ejemplo muestra una variable "localVar" declarada con la palabra reservada "var", pero define otra variable dentro de ella sin ninguna de las palabras reservadas, por lo tanto al ejecutar la funcion anotherFunction2() se puede acceder a la variable "globalVar"
+
